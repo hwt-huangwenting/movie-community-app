@@ -1,0 +1,69 @@
+.header {
+    background-color: #7b6c6c;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+  }
+  
+  .header nav a:hover {
+    color: #007bff;
+  }
+
+  /* 添加当前页面菜单项的高亮样式 */
+  .header nav a.active {
+    color: #FFFF00; /* 例如，高亮颜色设置为黄色 */
+    font-weight: bold;
+    /* 你可以根据需要添加其他样式，比如下划线 */
+    border-bottom: 2px solid #FFFF00;
+    padding-bottom: 2px; /* 与下划线有一点间隔 */
+  }
+
+  .header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .header .username {
+    color: #FFFF00;
+    font-weight: 600;
+    background-color: rgba(45, 42, 42, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logout-button {
+    background: none;
+    border: 1px solid #ff4757;
+    color: #ff4757;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+  }
+
+  .logout-button:hover {
+    background-color: #ff4757;
+    color: white;
+  }
