@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const JWT_SECRET = 'your-secret-key'; // 确保与server.js中的密钥一致
+const config = require('../config');
 
 const authenticateToken = (req, res, next) => {
   // 定义不需要token验证的公开路径
@@ -31,7 +31,7 @@ const authenticateToken = (req, res, next) => {
   }
 
   // 验证Token
-  jwt.verify(token, JWT_SECRET, (err, user) => {
+  jwt.verify(token, config.jwtSecret, (err, user) => {
     if (err) {
       // Token无效或已过期
       return res.status(403).json({ error: 'token无效' });

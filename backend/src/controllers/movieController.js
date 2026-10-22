@@ -18,9 +18,9 @@ const searchMovies = (req, res) => {
     params.push(`%${query}%`);
   }
   
-  // 类型筛选
+  // 类型筛选（类型存放在 description 字段，沿用既有表结构）
   if (type) {
-    where.push('type = ?');
+    where.push('description = ?');
     params.push(type);
   }
   
@@ -137,7 +137,6 @@ const getPopularMovies = async (req, res) => {
           m.image,
           m.video_url,
           m.description,
-          m.type,
           m.region,
           COALESCE(AVG(CASE WHEN c.rating IS NOT NULL THEN c.rating END), 0) as average_rating,
           SUM(CASE WHEN c.rating IS NOT NULL THEN 1 ELSE 0 END) as rated_comment_count,

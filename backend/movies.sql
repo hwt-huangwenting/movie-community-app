@@ -3,16 +3,17 @@ USE movies_db;
 
 CREATE TABLE IF NOT EXISTS movies (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  hwt_title VARCHAR(255) NOT NULL,  -- 使用拼音首字母命名
-	description TEXT,
+  hwt_title VARCHAR(255) NOT NULL,
+  description TEXT COMMENT '类型/标签，如 剧情、科幻',
+  summary TEXT COMMENT '剧情简介',
   year INT,
   rating DECIMAL(3,1),
   image VARCHAR(255),
   video_url VARCHAR(255),
-  region VARCHAR(32)
+  region VARCHAR(32),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  INDEX idx_title (hwt_title),      -- 标题索引
-  INDEX idx_year (year)             -- 年份索引
+  INDEX idx_title (hwt_title),
+  INDEX idx_year (year)
 );
 
 
@@ -34,10 +35,7 @@ UPDATE movies SET summary = '一部关于梦境与现实交错的科幻大片。
 UPDATE movies SET summary = '人类为寻找新家园而穿越虫洞的壮阔旅程。' WHERE id = 6;
 UPDATE movies SET summary = '宫崎骏经典动画，少女千寻在神秘世界的成长冒险。' WHERE id = 7;
 UPDATE movies SET summary = '黑帮家族的权力更迭与家族情感纠葛。' WHERE id = 8;
-UPDATE movies SET summary = '一部温情感人的现实题材电影。' WHERE id = 9;
-UPDATE movies SET summary = '一部悬疑推理电影，讲述了河边发生的离奇案件。' WHERE id = 10;
 
-UPDATE movies SET region = '美国' WHERE id IN (1,2,3,5,6,8);
+UPDATE movies SET region = '美国' WHERE id IN (1, 2, 3, 5, 6, 8);
 UPDATE movies SET region = '法国' WHERE id = 4;
 UPDATE movies SET region = '日本' WHERE id = 7;
-UPDATE movies SET region = '中国' WHERE id IN (9,10,11);

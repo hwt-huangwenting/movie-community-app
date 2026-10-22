@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { db } = require('../../server'); // Import db from server.js
-const JWT_SECRET = 'your-secret-key'; // Make sure this matches the secret in server.js and authMiddleware.js
+const config = require('../config');
 
 // 用户注册
 const register = async (req, res) => {
@@ -28,7 +28,7 @@ const register = async (req, res) => {
       }
 
       // 生成JWT
-      const token = jwt.sign({ id: result.insertId, username }, JWT_SECRET);
+      const token = jwt.sign({ id: result.insertId, username }, config.jwtSecret, { expiresIn: config.jwtExpiresIn });
       res.json({ token, username });
     });
   });
@@ -57,7 +57,7 @@ const login = (req, res) => {
     }
 
     // 生成JWT token
-    const token = jwt.sign({ id: user.hwt_id, username: user.username }, JWT_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign({ id: user.hwt_id, username: user.username }, config.jwtSecret, { expiresIn: config.jwtExpiresIn });
 
     // 登录成功，返回token 和 用户对象
     res.json({ token, user: { id: user.hwt_id, username: user.username, email: user.email } }); // 返回用户ID，用户名，邮箱

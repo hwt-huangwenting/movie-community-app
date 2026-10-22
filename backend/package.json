@@ -1,10 +1,11 @@
 {
   "name": "movie-app-server",
   "version": "1.0.0",
-  "description": "Movie App Server",
+  "description": "Movie community backend: Express + MySQL + JWT",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.1",
-    "mysql2": "^3.9.1"
+    "mysql2": "^3.9.1",
+    "dotenv": "^16.4.5"
   }
 }

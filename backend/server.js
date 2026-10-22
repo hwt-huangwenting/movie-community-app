@@ -4,13 +4,9 @@ const mysql = require('mysql2');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+const config = require('./src/config');
 const app = express();
-const port = 5000;
-
-// JWT密钥
-const JWT_SECRET = process.env.JWT_SECRET || 'replace_with_strong_secret_key';
+const port = config.port;
 
 // 确保上传目录存在
 const uploadDir = path.join(__dirname, 'uploads');
@@ -62,16 +58,17 @@ const upload = multer({
   storage: storage,
   fileFilter: fileFilter,
   limits: {
-    fileSize: 500 * 1024 * 1024, // 限制文件大小为500MB
+    fileSize: config.maxUploadSize, // 默认 500MB，可通过 MAX_UPLOAD_SIZE 调整
   }
 });
 
 // 创建数据库连接
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root', // 替换为你的MySQL用户名
-  password: '123456', // 替换为你的MySQL密码
-  database: 'movies_db'
+  host: config.db.host,
+  port: config.db.port,
+  user: config.db.user,
+  password: config.db.password,
+  database: config.db.database
 });
 
 // 连接数据库

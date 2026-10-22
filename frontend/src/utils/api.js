@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // 创建一个 axios 实例，配置了基础 URL
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api',
 });
 
 // 用于存储无效 token 处理函数

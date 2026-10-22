@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 556" width="880" height="556" font-family="-apple-system, 'Segoe UI', 'Microsoft YaHei', sans-serif">
+  <rect width="880" height="556" fill="#ffffff"/>
+
+  <!-- 前端 -->
+  <rect x="24" y="28" width="832" height="186" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="42" y="52" font-size="12" font-weight="600" fill="#1f2328">前端 · React 18 SPA</text>
+  <text x="176" y="52" font-size="11" fill="#8c959f">Create React App · React Router v6 · MUI</text>
+
+  <rect x="42" y="66" width="186" height="126" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="56" y="88" font-size="12" font-weight="600" fill="#1f2328">页面 / 路由</text>
+  <text x="56" y="110" font-size="11" fill="#57606a">/ 首页 · /popular 热门</text>
+  <text x="56" y="128" font-size="11" fill="#57606a">/category 分类 · /movie/:id 详情</text>
+  <text x="56" y="146" font-size="11" fill="#57606a">/my-collections 收藏</text>
+  <text x="56" y="164" font-size="11" fill="#57606a">/upload 上传 · /login · /register</text>
+
+  <rect x="244" y="66" width="186" height="126" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="258" y="88" font-size="12" font-weight="600" fill="#1f2328">AuthContext</text>
+  <text x="258" y="110" font-size="11" fill="#57606a">token 持久化到 localStorage</text>
+  <text x="258" y="128" font-size="11" fill="#57606a">登录 / 登出状态全局广播</text>
+  <text x="258" y="146" font-size="11" fill="#57606a">路由守卫：未登录访问收藏</text>
+  <text x="258" y="164" font-size="11" fill="#57606a">自动跳转 /login</text>
+
+  <rect x="446" y="66" width="190" height="126" rx="8" fill="#eef6ff" stroke="#9ac7f0"/>
+  <text x="460" y="88" font-size="12" font-weight="600" fill="#1f2328">axios 实例 utils/api.js</text>
+  <text x="460" y="110" font-size="11" fill="#57606a">请求拦截器：非白名单请求</text>
+  <text x="460" y="128" font-size="11" fill="#57606a">自动附加 Authorization</text>
+  <text x="460" y="146" font-size="11" fill="#57606a">响应拦截器：401 / 403</text>
+  <text x="460" y="164" font-size="11" fill="#57606a">统一清 token 并通知上下文</text>
+
+  <rect x="652" y="66" width="182" height="126" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="666" y="88" font-size="12" font-weight="600" fill="#1f2328">表现层组件</text>
+  <text x="666" y="110" font-size="11" fill="#57606a">MovieList / PopularMovieList</text>
+  <text x="666" y="128" font-size="11" fill="#57606a">Comments / Search / Header</text>
+  <text x="666" y="146" font-size="11" fill="#57606a">搜索输入 lodash 防抖</text>
+  <text x="666" y="164" font-size="11" fill="#57606a">样式拆分到 styles/*.css</text>
+
+  <path d="M440 214 L440 244" stroke="#0969da" stroke-width="1.4" fill="none"/>
+  <path d="M436 239 L440 245 L444 239" stroke="#0969da" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <text x="452" y="234" font-size="10.5" fill="#57606a">HTTP / JSON · Bearer token</text>
+
+  <!-- 后端 -->
+  <rect x="24" y="252" width="832" height="176" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="42" y="276" font-size="12" font-weight="600" fill="#1f2328">后端 · Node.js + Express</text>
+  <text x="196" y="276" font-size="11" fill="#8c959f">server.js 单入口 · mysql2 连接池 · multer 上传</text>
+
+  <rect x="42" y="290" width="140" height="118" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="54" y="312" font-size="11.5" font-weight="600" fill="#1f2328">Express 应用</text>
+  <text x="54" y="332" font-size="10.5" fill="#57606a">cors</text>
+  <text x="54" y="350" font-size="10.5" fill="#57606a">express.json</text>
+  <text x="54" y="368" font-size="10.5" fill="#57606a">static /uploads</text>
+  <text x="54" y="386" font-size="10.5" fill="#57606a">连库成功后再挂路由</text>
+
+  <path d="M186 349 L204 349" stroke="#0969da" stroke-width="1.4" fill="none"/>
+  <path d="M199 345 L205 349 L199 353" stroke="#0969da" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+
+  <rect x="208" y="290" width="150" height="118" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="220" y="312" font-size="11.5" font-weight="600" fill="#1f2328">路由</text>
+  <text x="220" y="332" font-size="10.5" fill="#57606a">/api/auth/*</text>
+  <text x="220" y="350" font-size="10.5" fill="#57606a">/api/movies/*</text>
+  <text x="220" y="368" font-size="10.5" fill="#57606a">/api/comments</text>
+  <text x="220" y="386" font-size="10.5" fill="#57606a">/api/collections</text>
+
+  <path d="M362 349 L380 349" stroke="#0969da" stroke-width="1.4" fill="none"/>
+  <path d="M375 345 L381 349 L375 353" stroke="#0969da" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+
+  <rect x="384" y="290" width="158" height="118" rx="8" fill="#eef6ff" stroke="#9ac7f0"/>
+  <text x="396" y="312" font-size="11.5" font-weight="600" fill="#1f2328">authenticateToken</text>
+  <text x="396" y="332" font-size="10.5" fill="#57606a">公开路径白名单直接放行</text>
+  <text x="396" y="350" font-size="10.5" fill="#57606a">其余请求校验 JWT</text>
+  <text x="396" y="368" font-size="10.5" fill="#57606a">缺失 → 401，无效 → 403</text>
+  <text x="396" y="386" font-size="10.5" fill="#57606a">通过后挂 req.user</text>
+
+  <path d="M546 349 L564 349" stroke="#0969da" stroke-width="1.4" fill="none"/>
+  <path d="M559 345 L565 349 L559 353" stroke="#0969da" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+
+  <rect x="568" y="290" width="132" height="118" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="580" y="312" font-size="11.5" font-weight="600" fill="#1f2328">Controller</text>
+  <text x="580" y="332" font-size="10.5" fill="#57606a">参数解析</text>
+  <text x="580" y="350" font-size="10.5" fill="#57606a">SQL 查询 / 事务</text>
+  <text x="580" y="368" font-size="10.5" fill="#57606a">统一 JSON 响应</text>
+  <text x="580" y="386" font-size="10.5" fill="#57606a">错误码语义化</text>
+
+  <path d="M704 349 L722 349" stroke="#0969da" stroke-width="1.4" fill="none"/>
+  <path d="M717 345 L723 349 L717 353" stroke="#0969da" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+
+  <rect x="726" y="290" width="108" height="118" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="738" y="312" font-size="11.5" font-weight="600" fill="#1f2328">mysql2</text>
+  <text x="738" y="332" font-size="10.5" fill="#57606a">预编译</text>
+  <text x="738" y="350" font-size="10.5" fill="#57606a">参数绑定</text>
+  <text x="738" y="368" font-size="10.5" fill="#57606a">连接复用</text>
+
+  <!-- 数据层 -->
+  <path d="M780 412 L780 434" stroke="#0969da" stroke-width="1.4" fill="none"/>
+  <path d="M776 429 L780 435 L784 429" stroke="#0969da" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+
+  <rect x="24" y="440" width="832" height="88" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="42" y="464" font-size="12" font-weight="600" fill="#1f2328">MySQL · movies_db</text>
+  <text x="42" y="488" font-size="11" fill="#57606a">users  用户与口令哈希（bcrypt）</text>
+  <text x="42" y="508" font-size="11" fill="#57606a">comments  movie_id + user_id 外键，rating 1~5 约束</text>
+  <text x="430" y="488" font-size="11" fill="#57606a">movies  标题 / 年份 / 评分 / 地区 / 海报 / 视频地址</text>
+  <text x="430" y="508" font-size="11" fill="#57606a">collections  (user_id, movie_id) 唯一约束防重复收藏</text>
+</svg>
