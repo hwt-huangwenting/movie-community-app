@@ -106,7 +106,7 @@ npm start                   # http://localhost:3000
 | GET | `/api/auth/me` | 需要 | 当前登录用户 |
 | GET | `/api/movies` | — | 分页列表（`page`、`limit`，默认 1 / 4） |
 | GET | `/api/movies/search` | — | 筛选与搜索（`query`、`type`、`region`、`year`、`page`、`limit`） |
-| GET | `/api/movies/popular` | — | 热门榜单（按收藏数排序） |
+| GET | `/api/movies/popular` | — | 热度榜单：评分 50% + 加权评论数 30% + 收藏数 20%，归一化后取前 4 |
 | GET | `/api/movies/:id` | — | 详情 |
 | GET | `/api/movies/:movieId/comments` | — | 某部电影的评论（带用户名，按时间倒序） |
 | POST | `/api/comments` | 需要 | 发表评论：`{ movie_id, content, rating }`，两者不可同时为空 |
