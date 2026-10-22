@@ -212,7 +212,8 @@ const getPopularMovies = async (req, res) => {
 // 获取单个电影详情
 const getMovieById = (req, res) => {
   const movieId = req.params.id;
-  const sql = 'SELECT * FROM movies WHERE id = ?';
+  // 类型在库中存于 description 字段，这里别名为 type，让前端按业务语义取值
+  const sql = 'SELECT *, description AS type FROM movies WHERE id = ?';
 
   db.query(sql, [movieId], (err, results) => {
     if (err) {
